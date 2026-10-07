@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Sprint Tracker</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Study Sprint Tracker</h1>
+      <p>Practice Flask routes, fetch(), JSON, CRUD, sessions, login, and cookies.</p>
+    </header>
+
+    <div id="errorBox" class="error hidden"></div>
+
+    <section>
+      <h2>1. Session: identify the learner</h2>
+      <div class="row">
+        <div>
+          <label for="username">Username</label>
+          <input id="username" placeholder="e.g. Amina" />
+        </div>
+        <button id="loginButton">Login</button>
+        <button id="logoutButton" class="danger">Logout</button>
+      </div>
+      <div id="userStatus" class="status">Session route not connected yet.</div>
+    </section>
+
+    <section>
+      <h2>2. Cookie: save a non-sensitive preference</h2>
+      <div class="row">
+        <div>
+          <label for="focusMode">Focus mode</label>
+          <select id="focusMode">
+            <option value="standard">Standard</option>
+            <option value="deep">Deep Work</option>
+            <option value="revision">Revision</option>
+            <option value="practice">Practice</option>
+          </select>
+        </div>
+        <button id="saveFocusModeButton" class="secondary">Save Focus Mode</button>
+      </div>
+      <small>Inspect the <code>focus_mode</code> cookie in your browser developer tools after you build the route.</small>
+    </section>
+
+    <section>
+      <h2>3. CRUD: manage study sprints</h2>
+      <div class="row">
+        <div>
+          <label for="topic">Study topic</label>
+          <input id="topic" placeholder="e.g. PATCH requests" />
+        </div>
+        <div>
+          <label for="minutes">Minutes</label>
+          <input id="minutes" type="number" value="25" min="5" />
+        </div>
+        <button id="addSprintButton">Add Sprint</button>
+      </div>
+      <div id="sessions"></div>
+    </section>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
